@@ -1,8 +1,8 @@
 {
-  "name": "Trillo",
+  "name": "Trillo App",
   "version": "1.0.0",
   "description": "Trillo App",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
@@ -12,7 +12,7 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass  prefix:css compress:css"
   },
-  "author": "Jonas",
+  "author": "Shivam",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
