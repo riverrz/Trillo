@@ -180,11 +180,18 @@
 /////// Overview
 .overview {
     display: flex;
+    border-bottom: 1px solid var(--color-grey-light-2);
+    align-items: center;
     &__heading {
-
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
     }
     &__stars {
         margin-right: auto;
+        display: flex;
     }
     &__icon-star,
     &__icon-location {
@@ -193,18 +200,69 @@
         fill: var(--color-primary);
     }
     &__location{
-
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+    &__icon-location {
+        margin-right: .5rem;
     }
     &__rating {
-        
+        background-color: var(--color-primary);
+        margin-left: 3rem;
+        color: #fff;
+        align-self: stretch;
+        padding: 0 2.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
     }
     &__rating-average {
-
-        }
+        font-size: 2.25rem;
+        font-weight: 300;
+    }
     &__rating-count {
-
+        font-size: .8rem;
+        text-transform: uppercase;
+        margin-top: -3px;
     }
 }
-.btn-inline {
 
+//////////////////////
+/////// BUTTON INLINE
+.btn-inline {
+    border: none;
+    color: var(--color-primary);
+    font-size: inherit;
+    background-color: transparent;
+    padding-bottom: 1px;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px solid currentColor;  // here currentColor refers to the text color.
+    // current color can be said as the most closest color to this element.
+    transition: all .2s;
+    &:hover {
+        color: var(--color-grey-dark-1);
+    }
+
+    &:focus {
+        outline: none;
+        animation: pulsate 1s infinite;
+    }
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        box-shadow: none;
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: none;
+    }
 }
