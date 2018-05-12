@@ -219,8 +219,8 @@ body {
     width: 100%;
     display: block;
     backface-visibility: hidden;
-    transition: all .8s;
-    transform: scale(1.4); }
+    transition: all .4s;
+    transform: scale(1.1); }
   .gallery__caption {
     position: absolute;
     top: 50%;
@@ -235,6 +235,7 @@ body {
     opacity: 1;
     transform: translate(-50%, -50%); }
   .gallery__item:hover > .gallery__photo {
+    -webkit-filter: blur(3px) brightness(40%);
     filter: blur(3px) brightness(40%);
     transform: scale(1); }
 
